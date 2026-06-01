@@ -1,0 +1,809 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="LumiHome – inteligentne oświetlenie LED dla nowoczesnych wnętrz. Energooszczędne, eleganckie, sterowane smartfonem." />
+  <title>LumiHome – Inteligentne Oświetlenie LED</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@200;300;400;500;600;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- Skip to content link for accessibility -->
+  <a href="#main-content" class="skip-link">Przejdź do treści</a>
+
+  <!-- ===================== HEADER / NAV ===================== -->
+  <header class="site-header" role="banner">
+    <nav class="nav-container" aria-label="Główna nawigacja">
+      <a href="#hero" class="nav-logo" aria-label="LumiHome – strona główna">
+        <span class="logo-mark" aria-hidden="true"></span>
+        LumiHome
+      </a>
+
+      <!-- Desktop navigation links -->
+      <ul class="nav-links" role="list">
+        <li><a href="#about" class="nav-link">O marce</a></li>
+        <li><a href="#benefits" class="nav-link">Zalety</a></li>
+        <li><a href="#products" class="nav-link">Produkty</a></li>
+        <li><a href="#calculator" class="nav-link">Kalkulator</a></li>
+        <li><a href="#gallery" class="nav-link">Inspiracje</a></li>
+        <li><a href="#contact" class="nav-link">Kontakt</a></li>
+      </ul>
+
+      <!-- Controls: theme toggle + mobile menu -->
+      <div class="nav-controls">
+        <button
+          class="theme-toggle"
+          id="theme-toggle"
+          aria-label="Przełącz motyw"
+          title="Przełącz motyw jasny/ciemny"
+        >
+          <span class="theme-icon theme-icon--light" aria-hidden="true">☀</span>
+          <span class="theme-icon theme-icon--dark" aria-hidden="true">◑</span>
+        </button>
+
+        <button
+          class="mobile-menu-btn"
+          id="mobile-menu-btn"
+          aria-label="Otwórz menu"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+        >
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Mobile menu -->
+    <div class="mobile-menu" id="mobile-menu" role="dialog" aria-label="Menu nawigacyjne" hidden>
+      <ul class="mobile-nav-links" role="list">
+        <li><a href="#about" class="mobile-nav-link">O marce</a></li>
+        <li><a href="#benefits" class="mobile-nav-link">Zalety</a></li>
+        <li><a href="#products" class="mobile-nav-link">Produkty</a></li>
+        <li><a href="#calculator" class="mobile-nav-link">Kalkulator</a></li>
+        <li><a href="#gallery" class="mobile-nav-link">Inspiracje</a></li>
+        <li><a href="#contact" class="mobile-nav-link">Kontakt</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- ===================== MAIN CONTENT ===================== -->
+  <main id="main-content">
+
+    <!-- ========== SECTION 1: HERO ========== -->
+    <section class="hero" id="hero" aria-labelledby="hero-headline">
+      <div class="hero-content">
+        <p class="hero-eyebrow">Inteligentne oświetlenie</p>
+        <h1 class="hero-headline" id="hero-headline">
+          Światło,<br />
+          <em>które myśli</em><br />
+          razem z Tobą.
+        </h1>
+        <p class="hero-description">
+          LumiHome to ekosystem inteligentnego oświetlenia LED — zaprojektowany
+          z myślą o estetyce, efektywności i Twoim komforcie.
+        </p>
+        <div class="hero-cta">
+          <a href="#products" class="cta-primary">Zobacz produkty</a>
+          <a href="#calculator" class="cta-secondary">Oblicz oświetlenie</a>
+        </div>
+      </div>
+
+      <!-- Abstract CSS/SVG lighting visual -->
+      <div class="hero-visual" aria-hidden="true">
+        <svg class="hero-svg" viewBox="0 0 520 520" xmlns="http://www.w3.org/2000/svg">
+          <!-- Outer ring -->
+          <circle cx="260" cy="260" r="210" fill="none" stroke="var(--accent)" stroke-width="0.5" opacity="0.3"/>
+          <!-- Inner rings -->
+          <circle cx="260" cy="260" r="150" fill="none" stroke="var(--accent)" stroke-width="0.5" opacity="0.5"/>
+          <circle cx="260" cy="260" r="90" fill="none" stroke="var(--accent)" stroke-width="1" opacity="0.7"/>
+          <!-- Core glow -->
+          <circle cx="260" cy="260" r="40" fill="var(--accent)" opacity="0.15"/>
+          <circle cx="260" cy="260" r="22" fill="var(--accent)" opacity="0.4"/>
+          <circle cx="260" cy="260" r="10" fill="var(--accent)" opacity="0.9"/>
+          <!-- Light rays (lines) -->
+          <line x1="260" y1="50" x2="260" y2="160" stroke="var(--accent)" stroke-width="0.8" opacity="0.4"/>
+          <line x1="260" y1="360" x2="260" y2="470" stroke="var(--accent)" stroke-width="0.8" opacity="0.4"/>
+          <line x1="50" y1="260" x2="160" y2="260" stroke="var(--accent)" stroke-width="0.8" opacity="0.4"/>
+          <line x1="360" y1="260" x2="470" y2="260" stroke="var(--accent)" stroke-width="0.8" opacity="0.4"/>
+          <!-- Diagonal rays -->
+          <line x1="111" y1="111" x2="175" y2="175" stroke="var(--accent)" stroke-width="0.6" opacity="0.25"/>
+          <line x1="345" y1="345" x2="409" y2="409" stroke="var(--accent)" stroke-width="0.6" opacity="0.25"/>
+          <line x1="409" y1="111" x2="345" y2="175" stroke="var(--accent)" stroke-width="0.6" opacity="0.25"/>
+          <line x1="111" y1="409" x2="175" y2="345" stroke="var(--accent)" stroke-width="0.6" opacity="0.25"/>
+          <!-- Arc detail -->
+          <path d="M 200 140 A 130 130 0 0 1 320 140" fill="none" stroke="var(--accent)" stroke-width="0.6" opacity="0.35"/>
+          <!-- Small decorative dots -->
+          <circle cx="260" cy="110" r="3" fill="var(--accent)" opacity="0.6"/>
+          <circle cx="410" cy="260" r="3" fill="var(--accent)" opacity="0.6"/>
+          <circle cx="260" cy="410" r="3" fill="var(--accent)" opacity="0.6"/>
+          <circle cx="110" cy="260" r="3" fill="var(--accent)" opacity="0.6"/>
+          <!-- Offset accent circle -->
+          <circle cx="330" cy="190" r="60" fill="none" stroke="var(--accent)" stroke-width="0.4" opacity="0.2" stroke-dasharray="4 6"/>
+        </svg>
+        <!-- Ambient glow behind SVG -->
+        <div class="hero-glow" aria-hidden="true"></div>
+      </div>
+    </section>
+
+    <!-- ========== SECTION 2: ABOUT ========== -->
+    <section class="about" id="about" aria-labelledby="about-headline">
+      <div class="section-container">
+        <div class="about-layout">
+          <div class="about-label-col">
+            <span class="section-label">O marce</span>
+            <!-- Small decorative SVG motif -->
+            <svg class="about-motif" viewBox="0 0 60 200" aria-hidden="true">
+              <line x1="30" y1="0" x2="30" y2="200" stroke="var(--accent)" stroke-width="0.8" opacity="0.4"/>
+              <circle cx="30" cy="60" r="4" fill="var(--accent)" opacity="0.7"/>
+              <circle cx="30" cy="120" r="2" fill="var(--accent)" opacity="0.4"/>
+              <circle cx="30" cy="160" r="1.5" fill="var(--accent)" opacity="0.3"/>
+            </svg>
+          </div>
+          <div class="about-text-col">
+            <h2 class="about-headline" id="about-headline">
+              System oświetlenia<br />zaprojektowany dla Twojego życia.
+            </h2>
+            <p class="about-body">
+              LumiHome to kompletny ekosystem inteligentnego oświetlenia LED dla domów i mieszkań.
+              Łączymy zaawansowaną technologię z minimalizmem formy — tworząc produkty, które
+              nie tylko oświetlają, ale i kształtują atmosferę każdego pomieszczenia.
+            </p>
+            <p class="about-body">
+              Nasze rozwiązania pobierają do <strong>80% mniej energii</strong> niż tradycyjne źródła światła.
+              Sterowanie przez aplikację, głosem lub harmonogramem sprawia, że Twój dom reaguje
+              dokładnie tak, jak chcesz — o każdej porze dnia i nocy.
+            </p>
+            <ul class="about-pillars" role="list">
+              <li>
+                <span class="pillar-dot" aria-hidden="true"></span>
+                Energooszczędność klasy A++
+              </li>
+              <li>
+                <span class="pillar-dot" aria-hidden="true"></span>
+                Sterowanie głosem i aplikacją
+              </li>
+              <li>
+                <span class="pillar-dot" aria-hidden="true"></span>
+                Projektowane w Europie
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== SECTION 3: BENEFITS ========== -->
+    <section class="benefits" id="benefits" aria-labelledby="benefits-headline">
+      <div class="section-container">
+        <div class="benefits-header">
+          <span class="section-label">Zalety</span>
+          <h2 class="benefits-headline" id="benefits-headline">
+            Dlaczego LumiHome?
+          </h2>
+        </div>
+
+        <div class="benefits-grid" role="list">
+
+          <article class="benefit-card" role="listitem">
+            <div class="benefit-icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48" fill="none">
+                <circle cx="24" cy="24" r="10" stroke="currentColor" stroke-width="1.5"/>
+                <path d="M24 4v6M24 38v6M4 24h6M38 24h6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                <path d="M11 11l4 4M33 33l4 4M11 37l4-4M33 15l4-4" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" opacity="0.5"/>
+              </svg>
+            </div>
+            <h3 class="benefit-title">Energooszczędność</h3>
+            <p class="benefit-desc">Diody LED klasy A++ zużywają do 80% mniej energii niż tradycyjne żarówki. Twój rachunek za prąd poczuje różnicę.</p>
+          </article>
+
+          <article class="benefit-card" role="listitem">
+            <div class="benefit-icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48" fill="none">
+                <rect x="8" y="14" width="32" height="22" rx="4" stroke="currentColor" stroke-width="1.5"/>
+                <path d="M17 36v4M31 36v4M14 40h20" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                <circle cx="24" cy="25" r="5" stroke="currentColor" stroke-width="1.2"/>
+                <path d="M24 20v-4" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" opacity="0.5"/>
+              </svg>
+            </div>
+            <h3 class="benefit-title">Inteligentne sterowanie</h3>
+            <p class="benefit-desc">Aplikacja mobilna, panel dotykowy, asystent głosowy — Twoje oświetlenie reaguje tak jak chcesz, kiedy chcesz.</p>
+          </article>
+
+          <article class="benefit-card" role="listitem">
+            <div class="benefit-icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48" fill="none">
+                <path d="M12 36c0-8 4-14 12-16s12 4 12 16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                <circle cx="24" cy="18" r="4" stroke="currentColor" stroke-width="1.2"/>
+                <path d="M8 40h32" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                <circle cx="16" cy="38" r="1.5" fill="currentColor" opacity="0.4"/>
+                <circle cx="24" cy="36" r="1.5" fill="currentColor" opacity="0.6"/>
+                <circle cx="32" cy="38" r="1.5" fill="currentColor" opacity="0.4"/>
+              </svg>
+            </div>
+            <h3 class="benefit-title">Sceny świetlne</h3>
+            <p class="benefit-desc">Zapisuj ulubione konfiguracje świateł — od relaksującego wieczoru po energetyczny poranek. Jednym dotknięciem.</p>
+          </article>
+
+          <article class="benefit-card" role="listitem">
+            <div class="benefit-icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48" fill="none">
+                <path d="M24 8c-8 0-14 5-14 12 0 5 3 9 8 11v5h12v-5c5-2 8-6 8-11 0-7-6-12-14-12z" stroke="currentColor" stroke-width="1.5"/>
+                <path d="M18 36h12M20 40h8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <h3 class="benefit-title">Komfort użytkowania</h3>
+            <p class="benefit-desc">Płynna regulacja barwy i jasności. Ciepłe światło do relaksu, zimne do pracy — Twoje oczy Ci podziękują.</p>
+          </article>
+
+          <article class="benefit-card" role="listitem">
+            <div class="benefit-icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48" fill="none">
+                <rect x="10" y="10" width="28" height="28" rx="2" stroke="currentColor" stroke-width="1.5"/>
+                <path d="M10 20h28M20 10v28" stroke="currentColor" stroke-width="1" opacity="0.4"/>
+                <rect x="14" y="14" width="6" height="6" rx="1" fill="currentColor" opacity="0.3"/>
+                <rect x="28" y="28" width="6" height="6" rx="1" fill="currentColor" opacity="0.3"/>
+              </svg>
+            </div>
+            <h3 class="benefit-title">Nowoczesny design</h3>
+            <p class="benefit-desc">Minimalistyczne formy, które komponują się z każdym wnętrzem. Oświetlenie jako element wystroju, nie tylko funkcja.</p>
+          </article>
+
+          <article class="benefit-card" role="listitem">
+            <div class="benefit-icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48" fill="none">
+                <path d="M16 28l-4 4 4 4M32 28l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M12 32h24" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                <path d="M24 8v16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                <circle cx="24" cy="24" r="3" fill="currentColor" opacity="0.5"/>
+                <path d="M17 15l7-7 7 7" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" opacity="0.5"/>
+              </svg>
+            </div>
+            <h3 class="benefit-title">Łatwy montaż</h3>
+            <p class="benefit-desc">Systemy Plug&amp;Play i intukcyjna instalacja bez specjalistycznej wiedzy. Od pudełka do działającego oświetlenia w minuty.</p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== SECTION 4: PRODUCTS ========== -->
+    <section class="products" id="products" aria-labelledby="products-headline">
+      <div class="section-container">
+        <div class="products-header">
+          <div>
+            <span class="section-label">Produkty</span>
+            <h2 class="products-headline" id="products-headline">Kolekcja LumiHome</h2>
+          </div>
+          <!-- Filter buttons -->
+          <div class="product-filters" role="group" aria-label="Filtruj produkty według kategorii">
+            <button class="filter-btn active" data-filter="wszystkie" aria-pressed="true">Wszystkie</button>
+            <button class="filter-btn" data-filter="oprawy" aria-pressed="false">Oprawy</button>
+            <button class="filter-btn" data-filter="tasmy-led" aria-pressed="false">Taśmy LED</button>
+            <button class="filter-btn" data-filter="sterowniki" aria-pressed="false">Sterowniki</button>
+            <button class="filter-btn" data-filter="akcesoria" aria-pressed="false">Akcesoria</button>
+          </div>
+        </div>
+
+        <div class="products-grid" id="products-grid" role="list">
+
+          <!-- Product 1 -->
+          <article class="product-card" data-category="oprawy" role="listitem">
+            <div class="product-visual" aria-hidden="true">
+              <svg viewBox="0 0 160 140" fill="none">
+                <ellipse cx="80" cy="55" rx="38" ry="12" stroke="var(--accent)" stroke-width="1.2" opacity="0.6"/>
+                <path d="M42 55 L52 110 L108 110 L118 55" stroke="var(--accent)" stroke-width="1.2" opacity="0.5" fill="var(--accent)" fill-opacity="0.04"/>
+                <ellipse cx="80" cy="110" rx="28" ry="6" fill="var(--accent)" opacity="0.08"/>
+                <circle cx="80" cy="55" r="6" fill="var(--accent)" opacity="0.7"/>
+                <path d="M80 20 L80 43" stroke="var(--accent)" stroke-width="2" stroke-linecap="round" opacity="0.5"/>
+                <circle cx="80" cy="18" r="4" fill="var(--accent)" opacity="0.3"/>
+              </svg>
+            </div>
+            <div class="product-info">
+              <span class="product-category">Oprawa</span>
+              <h3 class="product-name">Lumi Pendant P1</h3>
+              <p class="product-desc">Elegancka oprawa wisząca z regulowaną temperaturą barwową 2700–6500K. Idealna do jadalni i wyspy kuchennej.</p>
+            </div>
+          </article>
+
+          <!-- Product 2 -->
+          <article class="product-card" data-category="oprawy" role="listitem">
+            <div class="product-visual" aria-hidden="true">
+              <svg viewBox="0 0 160 140" fill="none">
+                <circle cx="80" cy="62" r="32" stroke="var(--accent)" stroke-width="1.2" opacity="0.5" fill="var(--accent)" fill-opacity="0.04"/>
+                <circle cx="80" cy="62" r="18" stroke="var(--accent)" stroke-width="1" opacity="0.6"/>
+                <circle cx="80" cy="62" r="8" fill="var(--accent)" opacity="0.6"/>
+                <ellipse cx="80" cy="104" rx="32" ry="7" fill="var(--accent)" opacity="0.06"/>
+                <path d="M60 30 L80 30 L100 30" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round" opacity="0.4"/>
+              </svg>
+            </div>
+            <div class="product-info">
+              <span class="product-category">Oprawa</span>
+              <h3 class="product-name">Lumi Flat F3</h3>
+              <p class="product-desc">Ultrapłaski panel sufitowy LED. Równomierne, antyolśnieniowe oświetlenie do salonów i biur domowych.</p>
+            </div>
+          </article>
+
+          <!-- Product 3 -->
+          <article class="product-card" data-category="tasmy-led" role="listitem">
+            <div class="product-visual" aria-hidden="true">
+              <svg viewBox="0 0 160 140" fill="none">
+                <rect x="20" y="60" width="120" height="18" rx="4" stroke="var(--accent)" stroke-width="1.2" opacity="0.5" fill="var(--accent)" fill-opacity="0.04"/>
+                <circle cx="38" cy="69" r="4" fill="var(--accent)" opacity="0.7"/>
+                <circle cx="58" cy="69" r="4" fill="var(--accent)" opacity="0.5"/>
+                <circle cx="78" cy="69" r="4" fill="var(--accent)" opacity="0.7"/>
+                <circle cx="98" cy="69" r="4" fill="var(--accent)" opacity="0.5"/>
+                <circle cx="118" cy="69" r="4" fill="var(--accent)" opacity="0.7"/>
+                <rect x="20" y="86" width="120" height="4" rx="2" fill="var(--accent)" opacity="0.08"/>
+                <path d="M14 60 L14 50 L24 50" stroke="var(--accent)" stroke-width="1.2" stroke-linecap="round" opacity="0.4"/>
+              </svg>
+            </div>
+            <div class="product-info">
+              <span class="product-category">Taśma LED</span>
+              <h3 class="product-name">LumiStrip Pro RGB</h3>
+              <p class="product-desc">Taśma LED RGBW 24V, gęstość 120 diod/m. Idealna do podświetleń mebli, schodów i sufitów pośrednich.</p>
+            </div>
+          </article>
+
+          <!-- Product 4 -->
+          <article class="product-card" data-category="tasmy-led" role="listitem">
+            <div class="product-visual" aria-hidden="true">
+              <svg viewBox="0 0 160 140" fill="none">
+                <!-- Coiled strip effect -->
+                <path d="M20 50 Q80 40 140 50" stroke="var(--accent)" stroke-width="8" stroke-linecap="round" opacity="0.15" fill="none"/>
+                <path d="M20 50 Q80 40 140 50" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round" opacity="0.6" fill="none"/>
+                <path d="M20 66 Q80 56 140 66" stroke="var(--accent)" stroke-width="8" stroke-linecap="round" opacity="0.15" fill="none"/>
+                <path d="M20 66 Q80 56 140 66" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round" opacity="0.5" fill="none"/>
+                <path d="M20 82 Q80 72 140 82" stroke="var(--accent)" stroke-width="8" stroke-linecap="round" opacity="0.10" fill="none"/>
+                <path d="M20 82 Q80 72 140 82" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round" opacity="0.4" fill="none"/>
+                <circle cx="140" cy="50" r="4" fill="var(--accent)" opacity="0.5"/>
+                <circle cx="20" cy="66" r="3" fill="var(--accent)" opacity="0.4"/>
+              </svg>
+            </div>
+            <div class="product-info">
+              <span class="product-category">Taśma LED</span>
+              <h3 class="product-name">LumiStrip Warm S2</h3>
+              <p class="product-desc">Taśma jednobiarwowa 2200K "candle glow". Tworzy wyjątkowo ciepłą, przytulną atmosferę w sypialniach i salonach.</p>
+            </div>
+          </article>
+
+          <!-- Product 5 -->
+          <article class="product-card" data-category="sterowniki" role="listitem">
+            <div class="product-visual" aria-hidden="true">
+              <svg viewBox="0 0 160 140" fill="none">
+                <rect x="35" y="38" width="90" height="64" rx="8" stroke="var(--accent)" stroke-width="1.2" opacity="0.5" fill="var(--accent)" fill-opacity="0.04"/>
+                <circle cx="80" cy="70" r="18" stroke="var(--accent)" stroke-width="1" opacity="0.6"/>
+                <circle cx="80" cy="70" r="10" stroke="var(--accent)" stroke-width="0.8" opacity="0.4"/>
+                <circle cx="80" cy="70" r="3" fill="var(--accent)" opacity="0.7"/>
+                <path d="M80 52 L80 56" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round" opacity="0.5"/>
+                <circle cx="52" cy="44" r="3" fill="var(--accent)" opacity="0.3"/>
+                <circle cx="108" cy="44" r="3" fill="var(--accent)" opacity="0.3"/>
+                <circle cx="52" cy="96" r="3" fill="var(--accent)" opacity="0.3"/>
+                <circle cx="108" cy="96" r="3" fill="var(--accent)" opacity="0.3"/>
+              </svg>
+            </div>
+            <div class="product-info">
+              <span class="product-category">Sterownik</span>
+              <h3 class="product-name">LumiHub Central C1</h3>
+              <p class="product-desc">Centralny sterownik Wi-Fi dla całego ekosystemu LumiHome. Obsługuje do 64 stref oświetleniowych. Zgodny z Matter.</p>
+            </div>
+          </article>
+
+          <!-- Product 6 -->
+          <article class="product-card" data-category="sterowniki" role="listitem">
+            <div class="product-visual" aria-hidden="true">
+              <svg viewBox="0 0 160 140" fill="none">
+                <rect x="50" y="32" width="60" height="90" rx="12" stroke="var(--accent)" stroke-width="1.2" opacity="0.5" fill="var(--accent)" fill-opacity="0.04"/>
+                <rect x="60" y="44" width="40" height="26" rx="3" stroke="var(--accent)" stroke-width="0.8" opacity="0.4"/>
+                <circle cx="80" cy="98" r="7" stroke="var(--accent)" stroke-width="1" opacity="0.5"/>
+                <path d="M65 80 L75 80M85 80 L95 80" stroke="var(--accent)" stroke-width="1.2" stroke-linecap="round" opacity="0.4"/>
+                <path d="M65 88 L95 88" stroke="var(--accent)" stroke-width="1.2" stroke-linecap="round" opacity="0.3"/>
+              </svg>
+            </div>
+            <div class="product-info">
+              <span class="product-category">Sterownik</span>
+              <h3 class="product-name">LumiTouch Dimmer D2</h3>
+              <p class="product-desc">Ściemniacz dotykowy z wyświetlaczem OLED. Montaż w standardowej puszce. Sterowanie gładką, ciągłą regulacją jasności.</p>
+            </div>
+          </article>
+
+          <!-- Product 7 -->
+          <article class="product-card" data-category="akcesoria" role="listitem">
+            <div class="product-visual" aria-hidden="true">
+              <svg viewBox="0 0 160 140" fill="none">
+                <rect x="30" y="50" width="100" height="40" rx="20" stroke="var(--accent)" stroke-width="1.2" opacity="0.5" fill="var(--accent)" fill-opacity="0.04"/>
+                <!-- Connector pins -->
+                <rect x="28" y="62" width="8" height="16" rx="2" fill="var(--accent)" opacity="0.3"/>
+                <rect x="124" y="62" width="8" height="16" rx="2" fill="var(--accent)" opacity="0.3"/>
+                <path d="M60 70 L100 70" stroke="var(--accent)" stroke-width="1" opacity="0.3" stroke-dasharray="4 4"/>
+                <circle cx="80" cy="70" r="5" stroke="var(--accent)" stroke-width="1" opacity="0.5"/>
+                <!-- Screw holes -->
+                <circle cx="46" cy="70" r="4" stroke="var(--accent)" stroke-width="0.8" opacity="0.4"/>
+                <circle cx="114" cy="70" r="4" stroke="var(--accent)" stroke-width="0.8" opacity="0.4"/>
+              </svg>
+            </div>
+            <div class="product-info">
+              <span class="product-category">Akcesoria</span>
+              <h3 class="product-name">LumiConnect X4</h3>
+              <p class="product-desc">Czterostrefowy łącznik do taśm LED. Beznarzędziowe podłączenie, metalowy zacisk, klasa IP44. Pakiet 5 sztuk.</p>
+            </div>
+          </article>
+
+          <!-- Product 8 -->
+          <article class="product-card" data-category="akcesoria" role="listitem">
+            <div class="product-visual" aria-hidden="true">
+              <svg viewBox="0 0 160 140" fill="none">
+                <!-- Profile cross-section -->
+                <rect x="30" y="45" width="100" height="20" rx="2" stroke="var(--accent)" stroke-width="1.2" opacity="0.5" fill="var(--accent)" fill-opacity="0.04"/>
+                <rect x="38" y="53" width="84" height="6" rx="1" fill="var(--accent)" opacity="0.15"/>
+                <!-- Side profile legs -->
+                <path d="M30 65 L22 80 L138 80 L130 65" stroke="var(--accent)" stroke-width="1" opacity="0.4" fill="var(--accent)" fill-opacity="0.02"/>
+                <!-- Diffuser glow -->
+                <rect x="22" y="80" width="116" height="8" rx="2" fill="var(--accent)" opacity="0.12"/>
+                <path d="M30 95 L130 95" stroke="var(--accent)" stroke-width="0.6" opacity="0.2" stroke-dasharray="8 4"/>
+              </svg>
+            </div>
+            <div class="product-info">
+              <span class="product-category">Akcesoria</span>
+              <h3 class="product-name">LumiProfile ALU-S</h3>
+              <p class="product-desc">Aluminiowy profil do taśm LED z mlecznym dyfuzorem. Eliminuje efekt "punktów świetlnych". Cięty na wymiar do 3m.</p>
+            </div>
+          </article>
+
+        </div>
+
+        <!-- No results message (hidden by default) -->
+        <p class="products-empty" id="products-empty" hidden aria-live="polite">
+          Brak produktów w tej kategorii.
+        </p>
+
+      </div>
+    </section>
+
+    <!-- ========== SECTION 5: CALCULATOR ========== -->
+    <section class="calculator" id="calculator" aria-labelledby="calculator-headline">
+      <div class="section-container">
+        <div class="calculator-layout">
+          <div class="calculator-intro">
+            <span class="section-label">Narzędzie</span>
+            <h2 class="calculator-headline" id="calculator-headline">
+              Kalkulator oświetlenia
+            </h2>
+            <p class="calculator-description">
+              Oblicz szacunkową liczbę opraw potrzebnych do oświetlenia Twojego pomieszczenia.
+              Podaj wymiary i typ pomieszczenia, a my podpowiemy optymalną konfigurację.
+            </p>
+            <p class="calculator-disclaimer">
+              <em>Wynik ma charakter orientacyjny. Dla precyzyjnych wyliczeń zalecamy konsultację z projektantem oświetlenia.</em>
+            </p>
+          </div>
+
+          <div class="calculator-form-area">
+            <form class="calc-form" id="calc-form" novalidate aria-label="Formularz kalkulatora oświetlenia">
+              <div class="calc-fields">
+                <div class="calc-field">
+                  <label for="room-length">Długość pomieszczenia (m)</label>
+                  <input
+                    type="number"
+                    id="room-length"
+                    name="room-length"
+                    min="1"
+                    max="100"
+                    step="0.1"
+                    placeholder="np. 5"
+                    required
+                    aria-required="true"
+                  />
+                </div>
+                <div class="calc-field">
+                  <label for="room-width">Szerokość pomieszczenia (m)</label>
+                  <input
+                    type="number"
+                    id="room-width"
+                    name="room-width"
+                    min="1"
+                    max="100"
+                    step="0.1"
+                    placeholder="np. 4"
+                    required
+                    aria-required="true"
+                  />
+                </div>
+                <div class="calc-field calc-field--full">
+                  <label for="room-type">Typ pomieszczenia</label>
+                  <select id="room-type" name="room-type" required aria-required="true">
+                    <option value="">Wybierz typ...</option>
+                    <option value="salon">Salon (300 lm/m²)</option>
+                    <option value="kuchnia">Kuchnia (500 lm/m²)</option>
+                    <option value="biuro">Biuro (500 lm/m²)</option>
+                    <option value="sypialnia">Sypialnia (200 lm/m²)</option>
+                  </select>
+                </div>
+              </div>
+
+              <button type="submit" class="calc-submit">Oblicz</button>
+            </form>
+
+            <!-- Results area -->
+            <div class="calc-results" id="calc-results" hidden aria-live="polite" aria-atomic="true">
+              <div class="result-item">
+                <span class="result-label">Powierzchnia</span>
+                <span class="result-value" id="result-area">—</span>
+                <span class="result-unit">m²</span>
+              </div>
+              <div class="result-item">
+                <span class="result-label">Potrzebny strumień</span>
+                <span class="result-value" id="result-lumens">—</span>
+                <span class="result-unit">lm</span>
+              </div>
+              <div class="result-item result-item--highlight">
+                <span class="result-label">Szacowana liczba opraw</span>
+                <span class="result-value" id="result-fixtures">—</span>
+                <span class="result-unit">szt.</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== SECTION 6: GALLERY ========== -->
+    <section class="gallery" id="gallery" aria-labelledby="gallery-headline">
+      <div class="section-container">
+        <div class="gallery-header">
+          <span class="section-label">Inspiracje</span>
+          <h2 class="gallery-headline" id="gallery-headline">Światło w przestrzeni</h2>
+        </div>
+      </div>
+
+      <!-- Full-bleed asymmetric editorial layout -->
+      <div class="gallery-grid">
+
+        <div class="gallery-block gallery-block--large">
+          <div class="gallery-visual" aria-hidden="true">
+            <svg viewBox="0 0 600 400" preserveAspectRatio="xMidYMid slice">
+              <!-- Abstract interior: salon with overhead pendant -->
+              <rect width="600" height="400" fill="var(--gallery-bg-1)"/>
+              <!-- Floor line -->
+              <path d="M0 320 L600 320" stroke="var(--accent)" stroke-width="0.5" opacity="0.3"/>
+              <!-- Wall corner -->
+              <path d="M180 0 L180 320" stroke="var(--accent)" stroke-width="0.5" opacity="0.2"/>
+              <!-- Pendant light -->
+              <path d="M390 0 L390 100" stroke="var(--accent)" stroke-width="1.5" opacity="0.6"/>
+              <ellipse cx="390" cy="120" rx="50" ry="16" fill="var(--accent)" opacity="0.1" stroke="var(--accent)" stroke-width="1"/>
+              <ellipse cx="390" cy="120" rx="25" ry="8" fill="var(--accent)" opacity="0.3"/>
+              <!-- Light cone -->
+              <path d="M340 136 L280 320 L500 320 L440 136 Z" fill="var(--accent)" opacity="0.04"/>
+              <!-- Floor shadow/glow -->
+              <ellipse cx="390" cy="318" rx="80" ry="10" fill="var(--accent)" opacity="0.08"/>
+              <!-- Furniture silhouettes -->
+              <rect x="230" y="260" width="140" height="60" rx="6" fill="var(--accent)" opacity="0.06" stroke="var(--accent)" stroke-width="0.5" opacity2="0.2"/>
+              <rect x="310" y="230" width="80" height="30" rx="4" fill="var(--accent)" opacity="0.05"/>
+              <!-- Small accent objects -->
+              <circle cx="490" cy="290" r="12" fill="var(--accent)" opacity="0.08" stroke="var(--accent)" stroke-width="0.5"/>
+              <!-- Text overlay -->
+              <text x="40" y="360" font-family="Lexend, Arial, sans-serif" font-size="11" fill="var(--accent)" opacity="0.5" letter-spacing="3">SALON</text>
+            </svg>
+          </div>
+          <div class="gallery-caption">
+            <h3>Salon — scena wieczorna</h3>
+            <p>Ciepłe 2700K, przyciemnione do 40%. Relaks po pracy.</p>
+          </div>
+        </div>
+
+        <div class="gallery-block gallery-block--portrait">
+          <div class="gallery-visual" aria-hidden="true">
+            <svg viewBox="0 0 300 480" preserveAspectRatio="xMidYMid slice">
+              <rect width="300" height="480" fill="var(--gallery-bg-2)"/>
+              <!-- Kitchen under-cabinet strip -->
+              <rect x="0" y="220" width="300" height="8" fill="var(--accent)" opacity="0.6"/>
+              <!-- Light wash below strip -->
+              <rect x="0" y="228" width="300" height="80" fill="var(--accent)" opacity="0.06"/>
+              <!-- Counter surface -->
+              <rect x="0" y="300" width="300" height="180" fill="var(--accent)" opacity="0.03" stroke="var(--accent)" stroke-width="0.5" stroke-opacity="0.2"/>
+              <!-- Cabinet lines -->
+              <rect x="0" y="0" width="300" height="220" fill="var(--accent)" opacity="0.02"/>
+              <path d="M0 70 L300 70M0 140 L300 140" stroke="var(--accent)" stroke-width="0.4" opacity="0.15"/>
+              <path d="M100 0 L100 220M200 0 L200 220" stroke="var(--accent)" stroke-width="0.4" opacity="0.15"/>
+              <!-- Overhead spots -->
+              <circle cx="50" cy="30" r="12" fill="var(--accent)" opacity="0.2" stroke="var(--accent)" stroke-width="0.8"/>
+              <circle cx="50" cy="30" r="5" fill="var(--accent)" opacity="0.7"/>
+              <circle cx="150" cy="30" r="12" fill="var(--accent)" opacity="0.2" stroke="var(--accent)" stroke-width="0.8"/>
+              <circle cx="150" cy="30" r="5" fill="var(--accent)" opacity="0.7"/>
+              <circle cx="250" cy="30" r="12" fill="var(--accent)" opacity="0.2" stroke="var(--accent)" stroke-width="0.8"/>
+              <circle cx="250" cy="30" r="5" fill="var(--accent)" opacity="0.7"/>
+              <text x="20" y="460" font-family="Lexend, Arial, sans-serif" font-size="10" fill="var(--accent)" opacity="0.5" letter-spacing="3">KUCHNIA</text>
+            </svg>
+          </div>
+          <div class="gallery-caption">
+            <h3>Kuchnia — światło funkcjonalne</h3>
+            <p>6500K nad blatem. Pełna jasność podczas gotowania.</p>
+          </div>
+        </div>
+
+        <div class="gallery-block gallery-block--wide">
+          <div class="gallery-visual" aria-hidden="true">
+            <svg viewBox="0 0 560 280" preserveAspectRatio="xMidYMid slice">
+              <rect width="560" height="280" fill="var(--gallery-bg-3)"/>
+              <!-- Cove lighting effect — ceiling-wall junction -->
+              <rect x="0" y="0" width="560" height="30" fill="var(--accent)" opacity="0.04"/>
+              <path d="M0 30 L560 30" stroke="var(--accent)" stroke-width="1" opacity="0.3"/>
+              <!-- Cove wash downward -->
+              <rect x="0" y="30" width="560" height="60" fill="var(--accent)" opacity="0.03"/>
+              <!-- Right wall cove -->
+              <rect x="530" y="0" width="30" height="280" fill="var(--accent)" opacity="0.04"/>
+              <path d="M530 0 L530 280" stroke="var(--accent)" stroke-width="1" opacity="0.3"/>
+              <!-- Staircase effect -->
+              <path d="M0 200 L80 200 L80 240 L160 240 L160 200 L240 200 L240 260 L320 260 L320 200 L560 200" stroke="var(--accent)" stroke-width="0.8" opacity="0.3" fill="none"/>
+              <!-- Strip on each stair tread -->
+              <rect x="20" y="196" width="60" height="4" rx="2" fill="var(--accent)" opacity="0.5"/>
+              <rect x="100" y="236" width="60" height="4" rx="2" fill="var(--accent)" opacity="0.5"/>
+              <rect x="180" y="196" width="60" height="4" rx="2" fill="var(--accent)" opacity="0.5"/>
+              <rect x="260" y="256" width="60" height="4" rx="2" fill="var(--accent)" opacity="0.5"/>
+              <text x="400" y="262" font-family="Lexend, Arial, sans-serif" font-size="10" fill="var(--accent)" opacity="0.5" letter-spacing="3">KORYTARZ / SCHODY</text>
+            </svg>
+          </div>
+          <div class="gallery-caption">
+            <h3>Schody — podświetlenie integracyjne</h3>
+            <p>LumiStrip wbudowany w podstopnice. Poczucie głębi i bezpieczeństwa.</p>
+          </div>
+        </div>
+
+        <div class="gallery-block gallery-block--square">
+          <div class="gallery-visual" aria-hidden="true">
+            <svg viewBox="0 0 320 320" preserveAspectRatio="xMidYMid slice">
+              <rect width="320" height="320" fill="var(--gallery-bg-4)"/>
+              <!-- Bedroom bedside sconce atmosphere -->
+              <!-- Bed headboard -->
+              <rect x="40" y="140" width="240" height="120" rx="4" fill="var(--accent)" opacity="0.04" stroke="var(--accent)" stroke-width="0.5" stroke-opacity="0.2"/>
+              <rect x="40" y="140" width="240" height="30" rx="4" fill="var(--accent)" opacity="0.04"/>
+              <!-- Pillow outlines -->
+              <rect x="55" y="176" width="90" height="70" rx="8" fill="var(--accent)" opacity="0.04" stroke="var(--accent)" stroke-width="0.5" stroke-opacity="0.15"/>
+              <rect x="175" y="176" width="90" height="70" rx="8" fill="var(--accent)" opacity="0.04" stroke="var(--accent)" stroke-width="0.5" stroke-opacity="0.15"/>
+              <!-- Left wall sconce -->
+              <rect x="20" y="100" width="20" height="36" rx="3" stroke="var(--accent)" stroke-width="1" opacity="0.5" fill="var(--accent)" fill-opacity="0.1"/>
+              <circle cx="30" cy="112" r="6" fill="var(--accent)" opacity="0.6"/>
+              <!-- Warm glow from sconce -->
+              <ellipse cx="30" cy="115" rx="40" ry="30" fill="var(--accent)" opacity="0.06"/>
+              <!-- Ceiling cove strip line -->
+              <path d="M0 60 L320 60" stroke="var(--accent)" stroke-width="0.8" opacity="0.25"/>
+              <rect x="0" y="55" width="320" height="5" rx="0" fill="var(--accent)" opacity="0.12"/>
+              <text x="20" y="310" font-family="Lexend, Arial, sans-serif" font-size="10" fill="var(--accent)" opacity="0.5" letter-spacing="3">SYPIALNIA</text>
+            </svg>
+          </div>
+          <div class="gallery-caption">
+            <h3>Sypialnia — nastrojowy zmierzch</h3>
+            <p>Kinkiety 2200K + pośrednia taśma przy suficie. Nocna rutyna.</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========== SECTION 7: CONTACT ========== -->
+    <section class="contact" id="contact" aria-labelledby="contact-headline">
+      <div class="section-container">
+        <div class="contact-layout">
+          <div class="contact-intro">
+            <span class="section-label">Kontakt</span>
+            <h2 class="contact-headline" id="contact-headline">
+              Porozmawiajmy<br />o Twoim wnętrzu.
+            </h2>
+            <p class="contact-description">
+              Masz pytania dotyczące produktów, projektu oświetlenia lub wyceny?
+              Napisz do nas — odpowiemy w ciągu 24 godzin.
+            </p>
+            <address class="contact-details" aria-label="Dane kontaktowe">
+              <p>hello@lumihome.pl</p>
+              <p>+48 22 000 00 00</p>
+              <p>Warszawa, Polska</p>
+            </address>
+          </div>
+
+          <div class="contact-form-area">
+            <!-- Success message (shown after valid submit) -->
+            <div
+              class="form-success"
+              id="form-success"
+              hidden
+              role="status"
+              aria-live="polite"
+            >
+              <span class="success-icon" aria-hidden="true">✓</span>
+              <p>Dziękujemy za wiadomość! Odpiszemy najszybciej jak to możliwe.</p>
+            </div>
+
+            <form class="contact-form" id="contact-form" novalidate aria-label="Formularz kontaktowy">
+              <div class="form-field">
+                <label for="contact-name">Imię i nazwisko</label>
+                <input
+                  type="text"
+                  id="contact-name"
+                  name="name"
+                  autocomplete="name"
+                  required
+                  aria-required="true"
+                  placeholder="Anna Kowalska"
+                />
+                <span class="field-error" id="name-error" role="alert" aria-live="polite"></span>
+              </div>
+
+              <div class="form-field">
+                <label for="contact-email">Adres e-mail</label>
+                <input
+                  type="email"
+                  id="contact-email"
+                  name="email"
+                  autocomplete="email"
+                  required
+                  aria-required="true"
+                  placeholder="anna@przykład.pl"
+                />
+                <span class="field-error" id="email-error" role="alert" aria-live="polite"></span>
+              </div>
+
+              <div class="form-field">
+                <label for="contact-message">Wiadomość</label>
+                <textarea
+                  id="contact-message"
+                  name="message"
+                  rows="5"
+                  required
+                  aria-required="true"
+                  placeholder="Opisz swoje potrzeby oświetleniowe lub zapytaj o konkretny produkt..."
+                ></textarea>
+                <span class="field-error" id="message-error" role="alert" aria-live="polite"></span>
+              </div>
+
+              <button type="submit" class="form-submit">Wyślij wiadomość</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-container">
+      <div class="footer-brand">
+        <a href="#hero" class="footer-logo" aria-label="LumiHome – powrót na górę">
+          <span class="logo-mark" aria-hidden="true"></span>
+          LumiHome
+        </a>
+        <p class="footer-tagline">Inteligentne oświetlenie LED dla nowoczesnych wnętrz.</p>
+        <p class="footer-note">Projekt statyczny — strona demonstracyjna.</p>
+      </div>
+
+      <nav class="footer-nav" aria-label="Nawigacja stopki">
+        <h3 class="footer-nav-title">Nawigacja</h3>
+        <ul role="list">
+          <li><a href="#about">O marce</a></li>
+          <li><a href="#benefits">Zalety</a></li>
+          <li><a href="#products">Produkty</a></li>
+          <li><a href="#calculator">Kalkulator</a></li>
+          <li><a href="#gallery">Inspiracje</a></li>
+          <li><a href="#contact">Kontakt</a></li>
+        </ul>
+      </nav>
+
+      <div class="footer-legal">
+        <p class="footer-credits">
+          &copy; 2025 LumiHome.<br />
+          Statyczny projekt HTML/CSS/JS.<br />
+          Stworzone jako projekt demonstracyjny.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
