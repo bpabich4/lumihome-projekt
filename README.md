@@ -1,7 +1,7 @@
 # LumiHome — Inteligentne Oświetlenie LED
 
 Statyczna strona internetowa dla fikcyjnej marki inteligentnego oświetlenia LED.  
-Projekt demonstracyjny wykonany w czystym HTML5, CSS3 i Vanilla JavaScript — bez żadnych frameworków.
+Projekt demonstracyjny wykonany w czystym HTML5, CSS3 i Vanilla JavaScript bez żadnych frameworków.
 
 ---
 
